@@ -1,0 +1,168 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/*#region header*/
+
+header {
+    height: fit-content;
+    flex-shrink: 0;
+    background-image: url("background2.jpg");
+}
+
+h1 {
+    text-transform: uppercase;
+    color: rgb(99, 1, 99);
+    font-size: 50px;
+    margin-bottom: 0;
+    margin-left: 20px;
+}
+
+h2 {
+    color: rgb(99, 1, 99);
+    margin:0;
+    margin-left: 20px;
+}
+
+.nav {
+    display: inline;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: fuchsia;
+    box-shadow: 5px -5px 15px black;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+/*#endregion*/
+
+/*#region footer*/
+
+footer {
+    height: 20px;
+    flex-shrink: 0;
+    background-color: orchid;
+}
+
+h5{
+    margin: 0;
+    padding-top: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+/*#endregion*/
+
+/*#region section*/
+
+section{
+    flex-grow: 1;
+    overflow-y: scroll;
+    background-color: plum;
+}
+
+h3 {
+    text-transform: uppercase;
+    color: fuchsia;
+    text-align: center;
+    border: 5px dotted fuchsia;
+}
+
+/*#endregion*/
+
+/*#region accueil*/
+
+#ecurie {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#unicorn {
+    display: flex;
+    flex-direction: column;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+/*#endregion*/
+
+/*#region tarif*/
+
+.basdepage {
+    display : flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.tarif {
+    border-bottom: 1px dashed black;
+}
+
+.niveau {
+    margin-right: 25px;
+}
+
+.price {
+    float: right;
+}
+
+/*#endregion*/
+
+/*#region contact*/
+
+label {
+    display: block;
+}
+
+#zone-texte {
+    width: 100%;
+}
+
+/*#endregion*/
+
+/*#region media-queries*/
+
+@media screen and (max-width:800px) {
+    #ecurie {
+        flex-direction: column;
+    }
+    #unicorn {
+        flex-direction: row;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width:425px) {
+    #unicorn {
+        flex-direction: column;
+    }
+    .nav {
+        /* display:flex;
+        flex-direction: row; */
+        padding: 3vw;
+    }
+    h1 {
+        font-size: 10vw;
+    }
+}
+
+/*#endregion*/
